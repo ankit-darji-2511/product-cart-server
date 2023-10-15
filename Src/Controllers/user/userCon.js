@@ -68,7 +68,6 @@ module.exports = {
     checkUser : async function (req ,res) {
         try {
             const checkUser = await App.Src.Services.user.userSrv.checkUser(req.body);
-            console.log("checkUser>> ",checkUser);
             if (checkUser != null && checkUser.length != 0) {
                 let resObj = {
                     status : 200,
