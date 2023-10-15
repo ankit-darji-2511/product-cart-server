@@ -5,9 +5,9 @@ module.exports = {
     try {
       const username = "";
       const password = "";
-      const host = "127.0.0.1"; 
-      const port = "27017"; 
-      const databaseName = "IMSApp";
+      const host = process.env.DB_HOST || "127.0.0.1"; 
+      const port =  process.env.DB_PORT ||"27017"; 
+      const databaseName = process.env.DB_NAME || "IMSApp";
       const mongoConnetcString = `mongodb://${host}:${port}/${databaseName}`;
       await App.Mongoose.connect(mongoConnetcString, {
         useNewUrlParser: true,

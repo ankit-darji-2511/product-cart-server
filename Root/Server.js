@@ -20,9 +20,6 @@ const App = require("./App");
       console.log("Router Loading ...");
       await require('../Library/route').load(); // load routers
       
-      
-
-
       // server connected
       App.ExpressServer.listen(App.Port, () => {
         console.log("Server started on Port : " + App.Port);
